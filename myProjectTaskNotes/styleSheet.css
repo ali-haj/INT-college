@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(/imgs/paper-1074131_1920.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.card {
+    width: 17%;
+    height: 200px;
+    position: relative;
+    margin-left: 15%;
+    margin-top: 5%;
+    /* transform: translate(-50%, -50%); */
+    perspective: 1000px;
+}
+
+.cover {
+    /* background-image: url(/imgs/2569919.jpg); */
+    background-size:100%;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    /* left: 40px; */
+    background-color: lightcoral;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition:  all .5s ease-in;
+}
+
+
+.coverFront {
+    margin-top: 30%;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.coverBack {
+   transform: rotateY(180deg);
+   margin-top: 50%;
+   display: block;
+   text-align: center;
+   
+}
+.card:hover .cover {
+    transform:  rotateY(-180deg);
+}
+.timeAndDate {
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+    border: solid 2px black;
+}
+.textNote {
+    text-align: center;
+    width: 70%;
+    font-size: 20px;
+    margin-top: 10%;
+    margin-left: 10%;
+    border: solid 2px gray;
+}
+i {
+    font-size: 50px;
+    color: red;
+    border-color: green;
+    border-style: solid;
+    border: 2px;
+}
+.del {
+    color: white;
+    font-size: 20px;
+    border-radius: 1em;
+}
+.cardId{
+    margin-left: 90%;
+    font-size: 25px;
+    color: red;
+}
